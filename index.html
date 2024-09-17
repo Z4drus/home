@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMF Home - By Noé</title>
+    <title>EMF Home</title>
     <link rel="icon" href="images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -21,36 +22,39 @@
                 <!-- Carte ChatGPT -->
                 <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#202120] via-[#2f2f2f] to-[#202120] before:absolute before:top-0 w-72 h-64 relative bg-[#2f2f2f] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
                     onclick="window.open('https://chatgpt.com', '_blank')">
-                    <div class="w-24 h-24 mt-6 bg-[#2f2f2f] rounded-full border-4 border-[#2f2f2f] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
+                    <div
+                        class="w-24 h-24 mt-6 bg-[#2f2f2f] rounded-full border-4 border-[#2f2f2f] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
                         <img src="images/svg/openai.svg" alt="OpenAI logo" class="w-16 h-16">
                     </div>
-    
+
                     <div class="z-10 group-hover:-translate-y-8 transition-all duration-500">
                         <span class="text-xl font-semibold text-gray-200">Chat GPT</span>
                         <p class="text-gray-400">IA textuelle</p>
                     </div>
                 </div>
-    
+
                 <!-- Carte SharePoint -->
                 <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#026d70] via-[#2da0a7] to-[#157d80] before:absolute before:top-0 w-72 h-64 relative bg-[#157d80] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
                     onclick="window.open('https://eduetatfr.sharepoint.com/sites/EMF-Root', '_blank')">
-                    <div class="w-24 h-24 mt-6 bg-[#157d80] rounded-full border-4 border-[#157d80] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
+                    <div
+                        class="w-24 h-24 mt-6 bg-[#157d80] rounded-full border-4 border-[#157d80] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
                         <img src="images/svg/sharepoint.svg" alt="SharePoint logo" class="w-16 h-16">
                     </div>
-    
+
                     <div class="z-10 group-hover:-translate-y-8 transition-all duration-500">
                         <span class="text-xl font-semibold text-gray-200">SharePoint EMF</span>
                         <p class="text-gray-400">Pour l'école</p>
                     </div>
                 </div>
-    
+
                 <!-- Carte OneDrive -->
                 <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#015298] via-[#0066b0] to-[#1176bc] before:absolute before:top-0 w-72 h-64 relative bg-[#1176bc] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
                     onclick="window.open('https://eduetatfr-my.sharepoint.com/my', '_blank')">
-                    <div class="w-24 h-24 mt-6 bg-[#1176bc] rounded-full border-4 border-[#1176bc] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
+                    <div
+                        class="w-24 h-24 mt-6 bg-[#1176bc] rounded-full border-4 border-[#1176bc] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
                         <img src="images/svg/onedrive.svg" alt="OneDrive logo" class="w-16 h-16">
                     </div>
-    
+
                     <div class="z-10 group-hover:-translate-y-8 transition-all duration-500">
                         <span class="text-xl font-semibold text-gray-200">OneDrive</span>
                         <p class="text-gray-400">Cloud personnel</p>
@@ -59,7 +63,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
 
@@ -91,7 +95,40 @@
         </div>
     </div>
 
+    <!-- Bouton Patchnote en haut à droite -->
+    <div class="absolute top-4 right-4 z-50 opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+        <img src="images/svg/patchnote.svg" alt="Patchnote" id="open-patchnote" class="w-10 h-10">
+    </div>
+
+    <!-- Arrière-plan sombre pour la popup -->
+    <div id="popup-background" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+
+    <!-- Fenêtre Pop-up au centre -->
+    <div id="patchnote-popup" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+        <div class="bg-white rounded-xl w-96 p-6 shadow-lg relative">
+            <!-- Bouton de fermeture -->
+            <button id="close-patchnote" class="absolute top-2 right-2 text-black text-2xl">&times;</button>
+
+            <!-- Contenu de la pop-up -->
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Patchnote</h2>
+
+            <!-- Informations sur les versions -->
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-semibold text-lg text-black">v0.4</h3>
+                    <p class="text-sm text-gray-600">Correction de bugs</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-black">v0.1 - v0.3</h3>
+                    <p class="text-sm text-gray-600">Premières versions de test.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="js/script.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 
 </html>
