@@ -4,25 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ㅤ</title>
+    <title>EMF Home - By Noé</title>
     <link rel="icon" href="images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <div class="card">
-        <svg viewBox="0 0 100% 100%" xmlns='http://www.w3.org/2000/svg' class="noise">
-            <filter id='noiseFilter'>
-                <feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='6' stitchTiles='stitch' />
-            </filter>
 
-            <rect width='100%' height='100%' preserveAspectRatio="xMidYMid meet" filter='url(#noiseFilter)' />
-        </svg>
+
+
+    <div class="card">
         <div class="content">
-            helo
-        </div>
+            <div class="flex justify-center gap-6">
+
+                <!-- Carte ChatGPT -->
+                <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#202120] via-[#2f2f2f] to-[#202120] before:absolute before:top-0 w-72 h-64 relative bg-[#2f2f2f] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
+                    onclick="window.open('https://chatgpt.com', '_blank')">
+                    <div class="w-24 h-24 mt-6 bg-[#2f2f2f] rounded-full border-4 border-[#2f2f2f] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
+                        <img src="images/svg/openai.svg" alt="OpenAI logo" class="w-16 h-16">
+                    </div>
     
+                    <div class="z-10 group-hover:-translate-y-8 transition-all duration-500">
+                        <span class="text-xl font-semibold text-gray-200">Chat GPT</span>
+                        <p class="text-gray-400">IA textuelle</p>
+                    </div>
+                </div>
+    
+                <!-- Carte SharePoint -->
+                <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#026d70] via-[#2da0a7] to-[#157d80] before:absolute before:top-0 w-72 h-64 relative bg-[#157d80] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
+                    onclick="window.open('https://eduetatfr.sharepoint.com/sites/EMF-Root', '_blank')">
+                    <div class="w-24 h-24 mt-6 bg-[#157d80] rounded-full border-4 border-[#157d80] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
+                        <img src="images/svg/sharepoint.svg" alt="SharePoint logo" class="w-16 h-16">
+                    </div>
+    
+                    <div class="z-10 group-hover:-translate-y-8 transition-all duration-500">
+                        <span class="text-xl font-semibold text-gray-200">SharePoint EMF</span>
+                        <p class="text-gray-400">Pour l'école</p>
+                    </div>
+                </div>
+    
+                <!-- Carte OneDrive -->
+                <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#015298] via-[#0066b0] to-[#1176bc] before:absolute before:top-0 w-72 h-64 relative bg-[#1176bc] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
+                    onclick="window.open('https://eduetatfr-my.sharepoint.com/my', '_blank')">
+                    <div class="w-24 h-24 mt-6 bg-[#1176bc] rounded-full border-4 border-[#1176bc] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
+                        <img src="images/svg/onedrive.svg" alt="OneDrive logo" class="w-16 h-16">
+                    </div>
+    
+                    <div class="z-10 group-hover:-translate-y-8 transition-all duration-500">
+                        <span class="text-xl font-semibold text-gray-200">OneDrive</span>
+                        <p class="text-gray-400">Cloud personnel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    
 
 
 
