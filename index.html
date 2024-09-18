@@ -111,24 +111,23 @@
         </div>
     </div>
 
-    <!-- Bouton Patchnote en haut à droite -->
-    <div class="absolute top-4 right-4 z-50 opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+    <div class="absolute top-4 right-16 z-50 opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
         <img src="images/svg/patchnote.svg" alt="Patchnote" id="open-patchnote" class="w-10 h-10">
     </div>
 
-    <!-- Arrière-plan sombre pour la popup -->
+    <div class="absolute top-4 right-4 z-50 opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+        <img src="images/svg/settings.svg" alt="Settings" id="open-settings" class="w-10 h-10">
+    </div>
+
     <div id="popup-background" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
 
-    <!-- Fenêtre Pop-up au centre -->
-    <div id="patchnote-popup" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+    <!-- Fenêtre Pop-up Patchnote -->
+    <div id="patchnote-popup" class="hidden fixed inset-0 z-50 flex items-center justify-center select-none">
         <div class="bg-white rounded-xl w-96 p-6 shadow-lg relative">
-            <!-- Bouton de fermeture -->
             <button id="close-patchnote" class="absolute top-2 right-2 text-black text-2xl">&times;</button>
 
-            <!-- Contenu de la pop-up -->
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Patchnote</h2>
 
-            <!-- Informations sur les versions -->
             <div class="space-y-4">
                 <div>
                     <h3 class="font-semibold text-lg text-black">v0.5</h3>
@@ -145,6 +144,22 @@
             </div>
         </div>
     </div>
+
+    <!-- Fenêtre Pop-up Settings -->
+    <div id="settings-popup" class="hidden fixed inset-0 z-50 flex items-center justify-center select-none">
+        <div class="bg-white rounded-xl w-96 p-6 shadow-lg relative">
+            <button id="close-settings" class="absolute top-2 right-2 text-black text-2xl">&times;</button>
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Settings</h2>
+
+            <div class="space-y-4">
+                <label for="color-slider" class="block text-gray-700 font-bold">Changer la teinte du background</label>
+                <input type="range" id="color-slider" min="0" max="360" value="0" class="w-full">
+            </div>
+        </div>
+    </div>
+
+
 
 
     <script src="js/script.js"></script>
