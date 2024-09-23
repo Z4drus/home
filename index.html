@@ -62,16 +62,44 @@
                 </div>
 
                 <!-- Carte Polosoft -->
-                <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#6b4fad] via-[#815fc0] to-[#9b72d0] before:absolute before:top-0 w-72 h-64 relative bg-[#815fc0] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
+                <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#2C3E50] via-[#556B78] to-[#4A5A6A] before:absolute before:top-0 w-72 h-64 relative bg-[#556B78] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
                     onclick="window.open('https://www.polosoft.ch/codeformat', '_blank')">
                     <div
-                        class="w-24 h-24 mt-6 bg-[#815fc0] rounded-full border-4 border-[#815fc0] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
+                        class="w-24 h-24 mt-6 bg-[#556B78] rounded-full border-4 border-[#556B78] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
                         <img src="images/svg/polosoft.svg" alt="Polosoft logo" class="w-16 h-16">
                     </div>
 
                     <div class="z-10 group-hover:-translate-y-8 transition-all duration-500">
                         <span class="text-xl font-semibold text-gray-200">Polosoft</span>
                         <p class="text-gray-400">Formateur de code</p>
+                    </div>
+                </div>
+
+                <!-- Carte Gmail -->
+                <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#2C3E50] via-[#34495E] to-[#3B5998] before:absolute before:top-0 w-72 h-64 relative bg-[#34495E] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
+                    onclick="window.open('https://mail.google.com/mail/u/0/#inbox', '_blank')">
+                    <div
+                        class="w-24 h-24 mt-6 bg-[#34495E] rounded-full border-4 border-[#34495E] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
+                        <img src="images/svg/gmail.svg" alt="Gmail logo" class="w-16 h-16">
+                    </div>
+
+                    <div class="z-10 group-hover:-translate-y-8 transition-all duration-500">
+                        <span class="text-xl font-semibold text-gray-200">Gmail</span>
+                        <p class="text-gray-400">Boîte mail privée</p>
+                    </div>
+                </div>
+
+                <!-- Carte GitHub avec logo blanc -->
+                <div class="cursor-pointer group before:hover:scale-95 before:hover:h-64 before:hover:w-72 before:hover:h-40 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-72 before:h-20 before:rounded-t-2xl before:bg-gradient-to-bl from-[#2C3E50] via-[#34495E] to-[#3B5998] before:absolute before:top-0 w-72 h-64 relative bg-[#2C3E50] flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden shadow-lg"
+                    onclick="window.open('https://github.com', '_blank')">
+                    <div
+                        class="w-24 h-24 mt-6 bg-[#2C3E50] rounded-full border-4 border-[#2C3E50] z-10 group-hover:scale-150 group-hover:-translate-x-20 group-hover:-translate-y-16 transition-all duration-500 flex items-center justify-center">
+                        <img src="images/svg/github.svg" alt="GitHub logo" class="w-16 h-16 filter invert">
+                    </div>
+
+                    <div class="z-10 group-hover:-translate-y-8 transition-all duration-500">
+                        <span class="text-xl font-semibold text-gray-200">GitHub</span>
+                        <p class="text-gray-400">Gestion de code</p>
                     </div>
                 </div>
 
@@ -123,15 +151,24 @@
 
     <!-- Fenêtre Pop-up Patchnote -->
     <div id="patchnote-popup" class="hidden fixed inset-0 z-50 flex items-center justify-center select-none">
-        <div class="bg-white rounded-xl w-96 p-6 shadow-lg relative">
+        <div class="bg-white rounded-xl w-4/12 p-6 shadow-lg relative">
             <button id="close-patchnote" class="absolute top-2 right-2 text-black text-2xl">&times;</button>
 
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Patchnote</h2>
 
             <div class="space-y-4">
                 <div>
+                    <h3 class="font-semibold text-lg text-black">v0.6</h3>
+                    <p class="text-sm text-gray-600">Correction bug lors du changement des couleurs du background dans
+                        settings</p>
+
+                    <p class="text-sm text-gray-600">Ajout de Github à la liste des Raccourcis</p>
+                    <p class="text-sm text-gray-600">Ajout de Gmail à la liste des Raccourcis</p>
+                    <p class="text-sm text-gray-600">Modification des couleurs pour Polosoft</p>
+                </div>
+                <div>
                     <h3 class="font-semibold text-lg text-black">v0.5</h3>
-                    <p class="text-sm text-gray-600">Ajout de Polosoft à la liste des logiciels</p>
+                    <p class="text-sm text-gray-600">Ajout de Polosoft à la liste des Raccourcis</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-lg text-black">v0.4</h3>

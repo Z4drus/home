@@ -80,10 +80,12 @@ $(document).ready(function () {
     colorSlider.addEventListener('input', function () {
         const hue = colorSlider.value;
 
-        root.style.setProperty('--color1', `${hue}, 100%, 50%`);
-        root.style.setProperty('--color2', `${(hue + 30) % 360}, 100%, 50%`);
-        root.style.setProperty('--color3', `${(hue + 60) % 360}, 100%, 50%`);
-        root.style.setProperty('--color4', `${(hue + 90) % 360}, 100%, 50%`);
-        root.style.setProperty('--color5', `${(hue + 120) % 360}, 100%, 50%`);
+        // Utilisation de la syntaxe HSL correcte
+        root.style.setProperty('--color1', `hsl(${hue}, 100%, 50%)`);
+        root.style.setProperty('--color2', `hsl(${(hue + 30) % 360}, 100%, 50%)`);
+        root.style.setProperty('--color3', `hsl(${(hue + 60) % 360}, 100%, 50%)`);
+        root.style.setProperty('--color4', `hsl(${(hue + 90) % 360}, 100%, 50%)`);
+        root.style.setProperty('--color5', `hsl(${(hue + 120) % 360}, 100%, 50%)`);
     });
+
 });
